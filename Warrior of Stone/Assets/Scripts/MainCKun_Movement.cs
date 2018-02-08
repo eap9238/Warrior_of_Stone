@@ -37,14 +37,14 @@ public class MainCKun_Movement : MonoBehaviour {
 		{
 			//print("left arrow key is held down");
 
-			tempVelocity.x -= 1;
+			tempVelocity.x -= 2;
 		}
 
 		if (Input.GetKey (KeyCode.RightArrow)) 
 		{
 			//print("right arrow key is held down");
 
-			tempVelocity.x += 1;
+			tempVelocity.x += 2;
 		}
 
 		if (Input.GetKey (KeyCode.W)) 
@@ -65,21 +65,26 @@ public class MainCKun_Movement : MonoBehaviour {
 		{
 			//print("a key is held down");
 
-			tempVelocity.x -= 1;
+			tempVelocity.x -= 2;
 		}
 
 		if (Input.GetKey (KeyCode.D)) 
 		{
 			//print("d key is held down");
 
-			tempVelocity.x += 1;
+			tempVelocity.x += 2;
 		}
 
 		if (Input.GetKey (KeyCode.Space)) 
 		{
 			//print("space bar is held down");
 
-			tempVelocity.y += 1;
+			//add some small gravity decrease for longer jumping on hold?
+
+			if (true) //not jumping
+			{ 
+				tempVelocity.y = 15;
+			}
 		}
 
 		if (tempVelocity.x > maxXVelocity) 
